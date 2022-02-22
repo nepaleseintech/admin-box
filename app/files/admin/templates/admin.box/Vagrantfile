@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+
+Vagrant.configure("2") do |config|
+
+  config.vm.network "forwarded_port", guest: 22, host: 8848
+  config.vm.box = "almalinux/8"
+  config.vm.define "admin.box", autostart: true do |linux|
+linux.vm.hostname = "admin.box"
+end
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "4096"
+	vb.name = "admin.box"
+  end
+
+  config.vm.provision "shell", path: "make_admin_box.sh", run: "always"
+
+end
