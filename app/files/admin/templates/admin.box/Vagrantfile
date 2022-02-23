@@ -13,3 +13,4 @@ end
     vb.memory = "4096"
 	vb.name = "admin.box"
   end
+end
