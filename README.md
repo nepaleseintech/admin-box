@@ -4,10 +4,7 @@
 server template files 
 
 ## servers
-this is where your server will be deployed
-
-## deploy
-bat file to execute powershell script
+this is where your server(s) will be deployed
 
 
 ## Author
