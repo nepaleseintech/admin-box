@@ -13,7 +13,3 @@ end
     vb.memory = "4096"
 	vb.name = "admin.box"
   end
-
-  config.vm.provision "shell", path: "make_admin_box.sh", run: "always"
-
-end
